@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:to_do_list/app_theam.dart';
+import 'package:to_do_list/intro_page/to_do_list_intro.dart';
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key, required this.title});
 
 
   final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-
 
   @override
   Widget build(BuildContext context) {
@@ -41,12 +36,25 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             const SizedBox(height: 100,),
-            Container(
-              height: 50,
-              width: 300,
-              color: App_Text.button_color,
-              child:  Center(child: Text("Get Started",
-              style: App_Text.button_text,),),
+            InkWell(
+              child: Container(
+                height: 50,
+                width: 300,
+                color: App_Text.button_color,
+                child:  Center(child: Text("Get Started",
+                style: App_Text.button_text,),),
+              ),
+              onTap: (){
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    type: PageTransitionType.rightToLeft,
+                    isIos: true,
+                    child:  const To_Do_List_Intro(),
+                    // FingerPrint(),
+                  ),
+                );
+              },
             )
           ],
         ),
