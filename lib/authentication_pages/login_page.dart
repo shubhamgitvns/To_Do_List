@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:to_do_list/home_page/bottombar.dart';
+import 'package:to_do_list/home_page/home_page.dart';
 
 import '../app_theam.dart';
 import '../intro_page/to_do_list_intro.dart';
@@ -198,14 +200,14 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 onTap: () {
-                  // Navigator.push(
-                  //   context,
-                  //   PageTransition(
-                  //     type: PageTransitionType.rightToLeft,
-                  //     isIos: true,
-                  //     child: const To_Do_List_Intro(),
-                  //   ),
-                  // );
+                  Navigator.push(
+                    context,
+                    PageTransition(
+                      type: PageTransitionType.topToBottom,
+                      isIos: true,
+                      child: Bottomnavigation(index: 0),
+                    ),
+                  );
                 },
               ),
 
