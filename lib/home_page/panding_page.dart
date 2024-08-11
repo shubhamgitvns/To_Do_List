@@ -36,10 +36,10 @@ class _PandingPageState extends State<PandingPage> {
                     style: const TextStyle(
                         color: Colors.black, fontWeight: FontWeight.bold),
                     decoration: InputDecoration(
-                        enabledBorder: const OutlineInputBorder(
+                        enabledBorder:  OutlineInputBorder(
                           // borderRadius: BorderRadius.circular(10),
                           borderSide: BorderSide(
-                            color: Colors.red,
+                            color: Colors.green.shade200,
                             //width: 1.5,
                           ),
                         ),
