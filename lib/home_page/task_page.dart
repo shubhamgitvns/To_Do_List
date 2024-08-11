@@ -76,12 +76,10 @@ class _TaskPageState extends State<TaskPage> {
                         child: Icon(Icons.star, size: 30,
                           color: isselect  ? Colors.green : Colors.green.shade100,
                         ),
-                        onDoubleTap: (){
+                        onTap: (){
                           setState(() {
-                            isselect=true;
-                          });
-                          setState(() {
-                            isselect = false;
+                            // using this double tap//
+                            isselect= !isselect;
                           });
                         },
                       ),
