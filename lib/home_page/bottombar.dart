@@ -39,7 +39,7 @@ class _BottomnavigationState extends State<Bottomnavigation> {
         unselectedItemColor: Colors.white,
         selectedItemColor: Colors.black,
         selectedIconTheme: const IconThemeData(color: Colors.black),
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.green.shade50,
         selectedLabelStyle: const TextStyle(fontSize: 2),
         currentIndex: _selectedIndex,
         onTap: (index) {
@@ -51,27 +51,23 @@ class _BottomnavigationState extends State<Bottomnavigation> {
         },
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Container(
-              height: 60,
-              width: 60,
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Icon(Icons.home_filled,
-                      color: _selectedIndex == 0 ? Colors.green : Colors.green.shade100,
+            icon: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(Icons.home_filled,
+                    color: _selectedIndex == 0 ? Colors.green : Colors.green.shade100,
 
+                  ),
+                  Text(
+                    "Home",
+                    style: TextStyle(
+                      fontSize: 10,
+                      color: _selectedIndex == 0 ? Colors.teal : Colors.green.shade100,
                     ),
-                    Text(
-                      "Home",
-                      style: TextStyle(
-                        fontSize: 10,
-                        color: _selectedIndex == 0 ? Colors.teal : Colors.green.shade100,
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
             label: '',
@@ -84,12 +80,12 @@ class _BottomnavigationState extends State<Bottomnavigation> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Icon(
-                    Icons.design_services,
+                    Icons.padding,
                     color: _selectedIndex == 1 ? Colors.green : Colors.green.shade100,
 
                   ),
                   Text(
-                    "Service",
+                    "Panding",
                     style: TextStyle(
                       fontSize: 10,
                       color: _selectedIndex == 1 ? Colors.teal : Colors.green.shade100,
@@ -101,30 +97,52 @@ class _BottomnavigationState extends State<Bottomnavigation> {
             label: '',
           ),
 
-          // BottomNavigationBarItem(
-          //   icon: Center(
-          //     child: Column(
-          //       mainAxisAlignment: MainAxisAlignment.center,
-          //       crossAxisAlignment: CrossAxisAlignment.center,
-          //       children: [
-          //         // Image(
-          //         //   image: const AssetImage(
-          //         //       "images/mobile_th.png"),
-          //         //   color: _selectedIndex == 2 ? Colors.red : Colors.red.shade100,
-          //         //
-          //         // ),
-          //         Text(
-          //           "Support",
-          //           style: TextStyle(
-          //             fontSize: 10,
-          //             color: _selectedIndex == 2 ? Colors.red : Colors.red.shade100,
-          //           ),
-          //         ),
-          //       ],
-          //     ),
-          //   ),
-          //   label: '',
-          // ),
+          BottomNavigationBarItem(
+            icon: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.task_alt,
+                    color: _selectedIndex == 2 ? Colors.green : Colors.green.shade100,
+
+                  ),
+                  Text(
+                    "Complete",
+                    style: TextStyle(
+                      fontSize: 10,
+                      color: _selectedIndex == 2 ? Colors.green : Colors.green.shade100,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.calendar_month,
+                    color: _selectedIndex == 2 ? Colors.green : Colors.green.shade100,
+
+                  ),
+                  Text(
+                    "Calland-er",
+                    style: TextStyle(
+                      fontSize: 10,
+                      color: _selectedIndex == 2 ? Colors.green : Colors.green.shade100,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            label: '',
+          ),
 
 
         ],
