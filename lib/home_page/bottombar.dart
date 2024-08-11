@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:to_do_list/home_page/compliet_task_page.dart';
 import 'package:to_do_list/home_page/home_page.dart';
 import 'package:to_do_list/home_page/panding_page.dart';
 
@@ -19,7 +20,7 @@ class _BottomnavigationState extends State<Bottomnavigation> {
   static final List<Widget> _widgetOptions = <Widget>[
     const HomePage(),
      const PandingPage(),
-    // const Support(),
+     const CompletePage(),
     // const Retailer_Report(),
     // const Profile(),
   ];
@@ -86,7 +87,7 @@ class _BottomnavigationState extends State<Bottomnavigation> {
 
                   ),
                   Text(
-                    "Panding",
+                    "Pending",
                     style: TextStyle(
                       fontSize: 10,
                       color: _selectedIndex == 1 ? Colors.teal : Colors.green.shade100,

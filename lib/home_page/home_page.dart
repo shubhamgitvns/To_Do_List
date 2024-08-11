@@ -30,6 +30,7 @@ class _HomePageState extends State<HomePage> {
         alignment: Alignment.bottomRight,
         children: [
           SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -138,7 +139,7 @@ class _HomePageState extends State<HomePage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text("3",style: TextStyle(color: Colors.green,fontSize: 25,fontWeight: FontWeight.bold),),
-                            Text("Panding Task",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w400),),
+                            Text("Pending Task",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w400),),
                           ],
                         ),
                       ),
