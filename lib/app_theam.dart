@@ -15,6 +15,9 @@ class App_Text{
   static TextEditingController number = TextEditingController();
   static TextEditingController password = TextEditingController();
 
+  //select var
+static String Screen_size="None";
+
 }
 
 class Support_container {

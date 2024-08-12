@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:to_do_list/app_theam.dart';
+import 'package:to_do_list/home_page/add_task/choose_screensize_page.dart';
 import 'package:to_do_list/home_page/bottombar.dart';
 import 'package:to_do_list/home_page/home_page.dart';
 
@@ -399,28 +401,40 @@ class _Add_TaskPageState extends State<Add_TaskPage> {
                   ],
                 ),
                 const SizedBox(height: 5,),
-                Container(
-                  height: 50,
-                  width: 350,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.green.shade200)
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(10.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text("None",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, color: Colors.black,fontSize: 18),),
-                        Padding(
-                          padding: EdgeInsets.only(right: 20),
-                          child: Icon(Icons.chevron_right,size: 30,color: Colors.green,),
-                        )
-                      ],
+                InkWell(
+                  child: Container(
+                    height: 50,
+                    width: 350,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Colors.green.shade200)
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(App_Text.Screen_size,
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold, color: Colors.black,fontSize: 18),),
+                          const Padding(
+                            padding: EdgeInsets.only(right: 20),
+                            child: Icon(Icons.chevron_right,size: 30,color: Colors.green,),
+                          )
+                        ],
+                      ),
                     ),
                   ),
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.rightToLeft,
+                        isIos: true,
+                        child: const Screensize_Page(),
+                      ),
+                    );
+                  },
                 ),
                 const SizedBox(
                   height: 20,
