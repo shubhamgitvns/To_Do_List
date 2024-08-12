@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:to_do_list/home_page/edit_task_pahge.dart';
 
 class TaskPage extends StatefulWidget {
   const TaskPage({super.key});
@@ -84,7 +86,19 @@ class _TaskPageState extends State<TaskPage> {
                         },
                       ),
                       const SizedBox(width: 30,),
-                      Icon(Icons.edit,color: Colors.green,size: 30,)
+                      InkWell(child: const Icon(Icons.edit,color: Colors.green,size: 30,),
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            PageTransition(
+                              type: PageTransitionType.rightToLeft,
+                              isIos: true,
+                              child: const Edit_TaskPage(),
+                            ),
+                          );
+
+                        },
+                      )
                       // Text("Edit..",style: TextStyle(color: Colors.teal,fontSize: 17,
                       //     decoration: TextDecoration.underline,decorationColor: Colors.green),)
                     ],

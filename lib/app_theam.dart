@@ -14,9 +14,11 @@ class App_Text{
   // Input Text var
   static TextEditingController number = TextEditingController();
   static TextEditingController password = TextEditingController();
+  static TextEditingController name = TextEditingController();
 
   //select var
-static String Screen_size="None";
+  static String connection = "";
+  static String Screen_size="None";
 
 }
 

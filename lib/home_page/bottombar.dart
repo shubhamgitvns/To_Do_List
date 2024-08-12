@@ -131,14 +131,14 @@ class _BottomnavigationState extends State<Bottomnavigation> {
                 children: [
                   Icon(
                     Icons.calendar_month,
-                    color: _selectedIndex == 2 ? Colors.green : Colors.green.shade100,
+                    color: _selectedIndex == 3 ? Colors.green : Colors.green.shade100,
 
                   ),
                   Text(
                     "Calender",
                     style: TextStyle(
                       fontSize: 10,
-                      color: _selectedIndex == 2 ? Colors.green : Colors.green.shade100,
+                      color: _selectedIndex == 3 ? Colors.green : Colors.green.shade100,
                     ),
                   ),
                 ],

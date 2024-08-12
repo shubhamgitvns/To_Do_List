@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:to_do_list/app_theam.dart';
-import 'package:to_do_list/home_page/add_task.dart';
+import 'package:to_do_list/home_page/add_task/add_task.dart';
 import 'package:to_do_list/home_page/category.dart';
+import 'package:to_do_list/home_page/profile_edit_page.dart';
 import 'package:to_do_list/home_page/task_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -78,19 +79,32 @@ class _HomePageState extends State<HomePage> {
                                 const SizedBox(
                                   width:200,
                                     child: Text("")),
-                                Container(
-                                  height: 30,
-                                  width: 80,
-                                  decoration: BoxDecoration(
-                                    color: Colors.green,
-                                    borderRadius: BorderRadius.circular(20),
-                                    border: Border.all(color: Colors.white,width: 1.5),
+                                InkWell(
+                                  child: Container(
+                                    height: 30,
+                                    width: 80,
+                                    decoration: BoxDecoration(
+                                      color: Colors.green,
+                                      borderRadius: BorderRadius.circular(20),
+                                      border: Border.all(color: Colors.white,width: 1.5),
 
-                                  ),
+                                    ),
 
-                                  child: const Center(
-                                    child: Text("Edit",style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.bold),),
+                                    child: const Center(
+                                      child: Text("Edit",style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.bold),),
+                                    ),
                                   ),
+                                  onTap: (){
+                                    Navigator.push(
+                                      context,
+                                      PageTransition(
+                                        type: PageTransitionType.rightToLeft,
+                                        isIos: true,
+                                        child: const Edit_ProfilePage(),
+                                      ),
+                                    );
+
+                                  },
                                 )
                               ],
                             ),
