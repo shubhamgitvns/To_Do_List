@@ -22,7 +22,6 @@ const List<String> list_b = <String>[
   'Yearly',
 ];
 
-
 class Edit_TaskPage extends StatefulWidget {
   const Edit_TaskPage({super.key});
 
@@ -35,6 +34,8 @@ class _Edit_TaskPageState extends State<Edit_TaskPage> {
   DateTime _selectedDate2 = DateTime.now();
 //*************Time picker initializer*************
   TimeOfDay _selectedTime = TimeOfDay.now();
+
+  bool delet = true;
 
   Future<void> _fromDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
@@ -62,7 +63,6 @@ class _Edit_TaskPageState extends State<Edit_TaskPage> {
       });
   }
 
-
 //*******************Select Time fun()****************
   Future<void> _selectTime(BuildContext context) async {
     final TimeOfDay? picked = await showTimePicker(
@@ -84,12 +84,21 @@ class _Edit_TaskPageState extends State<Edit_TaskPage> {
         automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         leading: InkWell(
-          child: const Icon(Icons.arrow_circle_left,size: 50,color: Colors.teal,),
-          onTap: (){
+          child: const Icon(
+            Icons.arrow_circle_left,
+            size: 50,
+            color: Colors.teal,
+          ),
+          onTap: () {
             Navigator.pop(context);
           },
         ),
-        title: const Center(child: Text("Edit Task",style: TextStyle(color: Colors.teal,fontWeight: FontWeight.bold,fontSize: 25),)),
+        title: const Center(
+            child: Text(
+          "Edit Task",
+          style: TextStyle(
+              color: Colors.teal, fontWeight: FontWeight.bold, fontSize: 25),
+        )),
       ),
       body: SingleChildScrollView(
         //physics: const BouncingScrollPhysics(),
@@ -102,7 +111,6 @@ class _Edit_TaskPageState extends State<Edit_TaskPage> {
                 const SizedBox(
                   height: 20,
                 ),
-
                 const Row(
                   children: [
                     Text(
@@ -138,9 +146,10 @@ class _Edit_TaskPageState extends State<Edit_TaskPage> {
                             //********Focus border like hover******************8
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
-                                borderSide:  const BorderSide(color: Colors.green)),
+                                borderSide:
+                                    const BorderSide(color: Colors.green)),
                             hintText: "Enter Task",
-                            hintStyle:  TextStyle(color: Colors.green.shade200),
+                            hintStyle: TextStyle(color: Colors.green.shade200),
                           ),
                         ),
                       ),
@@ -186,9 +195,10 @@ class _Edit_TaskPageState extends State<Edit_TaskPage> {
                             //********Focus border like hover******************8
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
-                                borderSide: const BorderSide(color: Colors.green)),
+                                borderSide:
+                                    const BorderSide(color: Colors.green)),
                             hintText: "Enter Sub-Task",
-                            hintStyle:  TextStyle(color: Colors.green.shade200),
+                            hintStyle: TextStyle(color: Colors.green.shade200),
                           ),
                         ),
                       ),
@@ -198,7 +208,6 @@ class _Edit_TaskPageState extends State<Edit_TaskPage> {
                 const SizedBox(
                   height: 20,
                 ),
-
                 const Row(
                   children: [
                     Text(
@@ -261,13 +270,14 @@ class _Edit_TaskPageState extends State<Edit_TaskPage> {
                                 decoration: InputDecoration(
                                   enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(10),
-                                    borderSide:  BorderSide(
+                                    borderSide: BorderSide(
                                       color: Colors.green.shade200,
                                       //width: 1.5,
                                     ),
                                   ),
-                                  labelText:
-                                  _selectedDate1.toString().substring(0, 10),
+                                  labelText: _selectedDate1
+                                      .toString()
+                                      .substring(0, 10),
                                   prefixIcon: const Icon(
                                     Icons.calendar_month,
                                     color: Colors.green,
@@ -306,25 +316,27 @@ class _Edit_TaskPageState extends State<Edit_TaskPage> {
                               child: Container(
                                 height: 60,
                                 decoration: BoxDecoration(
-                                    border: Border.all(color: Colors.green.shade200),
-                                    borderRadius: BorderRadius.circular(10)
-                                ),
+                                    border: Border.all(
+                                        color: Colors.green.shade200),
+                                    borderRadius: BorderRadius.circular(10)),
                                 child: Row(
                                   children: [
                                     const Padding(
                                       padding: EdgeInsets.all(10.0),
-                                      child: Icon(Icons.lock_clock,color: Colors.green,size: 30,),
+                                      child: Icon(
+                                        Icons.lock_clock,
+                                        color: Colors.green,
+                                        size: 30,
+                                      ),
                                     ),
                                     Text(_selectedTime.format(context))
                                   ],
-
                                 ),
                               ),
-                              onTap: (){
+                              onTap: () {
                                 _selectTime(context);
                               },
-                            )
-                        ),
+                            )),
                       ],
                     ),
                   ],
@@ -358,74 +370,98 @@ class _Edit_TaskPageState extends State<Edit_TaskPage> {
                         )),
                   ],
                 ),
-                const SizedBox(height: 20,),
+                const SizedBox(
+                  height: 20,
+                ),
                 const Row(
                   children: [
-                    Text("Choose Remainder",
+                    Text(
+                      "Choose Remainder",
                       style: TextStyle(
                           fontWeight: FontWeight.bold, color: Colors.green),
                     )
                   ],
                 ),
-                const SizedBox(height: 5,),
+                const SizedBox(
+                  height: 5,
+                ),
                 Container(
                   height: 50,
                   width: 350,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.green.shade200)
-                  ),
+                      border: Border.all(color: Colors.green.shade200)),
                   child: const Padding(
                     padding: EdgeInsets.all(10.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Remainder",
+                        Text(
+                          "Remainder",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, color: Colors.black,fontSize: 18),),
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                              fontSize: 18),
+                        ),
                         Padding(
                           padding: EdgeInsets.only(right: 20),
-                          child: Icon(Icons.chevron_right,size: 30,color: Colors.green,),
+                          child: Icon(
+                            Icons.chevron_right,
+                            size: 30,
+                            color: Colors.green,
+                          ),
                         )
                       ],
                     ),
                   ),
                 ),
-                const SizedBox(height: 20,),
+                const SizedBox(
+                  height: 20,
+                ),
                 const Row(
                   children: [
-                    Text("Choose Screen Size && Close Button",
+                    Text(
+                      "Choose Screen Size && Close Button",
                       style: TextStyle(
                           fontWeight: FontWeight.bold, color: Colors.green),
                     )
                   ],
                 ),
-                const SizedBox(height: 5,),
+                const SizedBox(
+                  height: 5,
+                ),
                 InkWell(
                   child: Container(
                     height: 50,
                     width: 350,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Colors.green.shade200)
-                    ),
+                        border: Border.all(color: Colors.green.shade200)),
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(App_Text.Screen_size,
+                          Text(
+                            App_Text.Screen_size,
                             style: const TextStyle(
-                                fontWeight: FontWeight.bold, color: Colors.black,fontSize: 18),),
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                                fontSize: 18),
+                          ),
                           const Padding(
                             padding: EdgeInsets.only(right: 20),
-                            child: Icon(Icons.chevron_right,size: 30,color: Colors.green,),
+                            child: Icon(
+                              Icons.chevron_right,
+                              size: 30,
+                              color: Colors.green,
+                            ),
                           )
                         ],
                       ),
                     ),
                   ),
-                  onTap: (){
+                  onTap: () {
                     Navigator.push(
                       context,
                       PageTransition(
@@ -465,7 +501,8 @@ class _Edit_TaskPageState extends State<Edit_TaskPage> {
                           cursorHeight: 20,
                           style: const TextStyle(
                               height: 5,
-                              color: Colors.black, fontWeight: FontWeight.bold),
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
                           decoration: InputDecoration(
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
@@ -478,9 +515,10 @@ class _Edit_TaskPageState extends State<Edit_TaskPage> {
                             //********Focus border like hover******************8
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
-                                borderSide: const BorderSide(color: Colors.green)),
+                                borderSide:
+                                    const BorderSide(color: Colors.green)),
                             //hintText: "Enter Sub-Task",
-                            hintStyle:  TextStyle(color: Colors.green.shade200),
+                            hintStyle: TextStyle(color: Colors.green.shade200),
                           ),
                         ),
                       ),
@@ -493,17 +531,120 @@ class _Edit_TaskPageState extends State<Edit_TaskPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                        height: 50,
-                        width: 150,
-                        decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(10)),
-                        child: const Center(
-                            child: Text(
-                              "Delete",
-                              style: TextStyle(color: Colors.white, fontSize: 20),
-                            ))),
+                    InkWell(
+                      child: Container(
+                          height: 50,
+                          width: 150,
+                          decoration: BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.circular(10)),
+                          child: const Center(
+                              child: Text(
+                            "Delete",
+                            style: TextStyle(color: Colors.white, fontSize: 20),
+                          ))),
+                      onTap: () {
+                        if (delet == true && App_Text.connection != 'none') {
+                          showModalBottomSheet<void>(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return Container(
+                                height: 300,
+                                color: Colors.green.shade100,
+                                child: Center(
+                                  child: Column(
+                                    // mainAxisSize: MainAxisSize.min,
+                                    children: <Widget>[
+                                      const SizedBox(
+                                        height: 20,
+                                      ),
+                                      const Center(
+                                          child: Text(
+                                        "Are You Sure!",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 25),
+                                      )),
+                                      const SizedBox(
+                                        height: 20,
+                                      ),
+                                      const Center(
+                                          child: Text(
+                                        "Do you really want to delete this task",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.green),
+                                      )),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          InkWell(
+                                            child: Container(
+                                              width: 70,
+                                              decoration: BoxDecoration(
+                                                  border: Border.all(
+                                                      color: Colors.green)),
+                                              child: const Center(
+                                                  child: Text(
+                                                "No",
+                                                style: TextStyle(
+                                                    fontSize: 20,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.green),
+                                              )),
+                                            ),
+                                            onTap: () {
+                                              Navigator.pop(context);
+                                            },
+                                          ),
+                                          InkWell(
+                                            child: Container(
+                                              width: 70,
+                                              decoration: BoxDecoration(
+                                                  color: Colors.green,
+                                                  border: Border.all(
+                                                      color: Colors.green)),
+                                              child: const Center(
+                                                  child: Text(
+                                                "Yes",
+                                                style: TextStyle(
+                                                    fontSize: 20,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.white),
+                                              )),
+                                            ),
+                                            onTap: () {
+                                              Navigator.push(
+                                                context,
+                                                PageTransition(
+                                                  type: PageTransitionType
+                                                      .leftToRight,
+                                                  isIos: true,
+                                                  child: Bottomnavigation(index: 0),
+                                                ),
+                                              );
+                                              // if(Platform.isAndroid){
+                                              //   SystemNavigator.pop();
+                                              // }else{
+                                              //   exit(0);
+                                              // }
+                                            },
+                                          )
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              );
+                            },
+                          );
+                        }
+                      },
+                    ),
                     InkWell(
                       child: Container(
                           height: 50,
@@ -513,16 +654,16 @@ class _Edit_TaskPageState extends State<Edit_TaskPage> {
                               borderRadius: BorderRadius.circular(10)),
                           child: const Center(
                               child: Text(
-                                "Save",
-                                style: TextStyle(color: Colors.white, fontSize: 20),
-                              ))),
-                      onTap: (){
+                            "Save",
+                            style: TextStyle(color: Colors.white, fontSize: 20),
+                          ))),
+                      onTap: () {
                         Navigator.push(
                           context,
                           PageTransition(
                             type: PageTransitionType.leftToRight,
                             isIos: true,
-                            child:  Bottomnavigation(index: 0),
+                            child: Bottomnavigation(index: 0),
                           ),
                         );
                       },
