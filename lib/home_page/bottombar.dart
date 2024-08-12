@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:to_do_list/home_page/calander_page.dart';
-import 'package:to_do_list/home_page/compliet_task_page.dart';
+import 'package:to_do_list/home_page/complete_task_page.dart';
 import 'package:to_do_list/home_page/home_page.dart';
 import 'package:to_do_list/home_page/panding_page.dart';
 
@@ -135,7 +135,7 @@ class _BottomnavigationState extends State<Bottomnavigation> {
 
                   ),
                   Text(
-                    "Calland-er",
+                    "Calender",
                     style: TextStyle(
                       fontSize: 10,
                       color: _selectedIndex == 2 ? Colors.green : Colors.green.shade100,

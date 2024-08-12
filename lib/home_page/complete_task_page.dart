@@ -15,6 +15,7 @@ class _CompletePageState extends State<CompletePage> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        backgroundColor: Colors.white,
         leading: InkWell(
             child: const Icon(Icons.arrow_circle_left,size: 50,color: Colors.teal,),
           onTap: (){
