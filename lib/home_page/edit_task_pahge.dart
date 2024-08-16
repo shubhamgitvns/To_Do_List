@@ -3,7 +3,6 @@ import 'package:page_transition/page_transition.dart';
 import 'package:to_do_list/app_theam.dart';
 import 'package:to_do_list/home_page/add_task/choose_screensize_page.dart';
 import 'package:to_do_list/home_page/bottombar.dart';
-import 'package:to_do_list/home_page/home_page.dart';
 
 const List<String> list_a = <String>[
   'Personal',
@@ -44,10 +43,11 @@ class _Edit_TaskPageState extends State<Edit_TaskPage> {
       firstDate: DateTime(2015, 8),
       lastDate: DateTime(2101),
     );
-    if (picked != null && picked != _selectedDate1)
+    if (picked != null && picked != _selectedDate1) {
       setState(() {
         _selectedDate1 = picked;
       });
+    }
   }
 
   Future<void> _ToDate(BuildContext context) async {
@@ -57,10 +57,11 @@ class _Edit_TaskPageState extends State<Edit_TaskPage> {
       firstDate: DateTime(2015, 8),
       lastDate: DateTime(2101),
     );
-    if (picked != null && picked != _selectedDate2)
+    if (picked != null && picked != _selectedDate2) {
       setState(() {
         _selectedDate2 = picked;
       });
+    }
   }
 
 //*******************Select Time fun()****************

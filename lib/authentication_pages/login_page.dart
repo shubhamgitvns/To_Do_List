@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:to_do_list/home_page/bottombar.dart';
-import 'package:to_do_list/home_page/home_page.dart';
 
 import '../app_theam.dart';
-import '../intro_page/to_do_list_intro.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -19,11 +17,11 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    Color getColor(Set<MaterialState> states) {
-      const Set<MaterialState> interactiveStates = <MaterialState>{
-        MaterialState.pressed,
-        MaterialState.hovered,
-        MaterialState.focused,
+    Color getColor(Set<WidgetState> states) {
+      const Set<WidgetState> interactiveStates = <WidgetState>{
+        WidgetState.pressed,
+        WidgetState.hovered,
+        WidgetState.focused,
       };
       if (states.any(interactiveStates.contains)) {
         return Colors.blue;
@@ -192,7 +190,7 @@ class _LoginPageState extends State<LoginPage> {
                   height: 50,
                   width: 350,
                   color: App_Text.button_color,
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "Login",
                       style: App_Text.button_text,
@@ -225,7 +223,7 @@ class _LoginPageState extends State<LoginPage> {
           isSecurePassword = !isSecurePassword;
         });
       },
-      icon: isSecurePassword ? Icon(Icons.visibility) : Icon(Icons.visibility_off),
+      icon: isSecurePassword ? const Icon(Icons.visibility) : const Icon(Icons.visibility_off),
       color: Colors.green,
     );
   }

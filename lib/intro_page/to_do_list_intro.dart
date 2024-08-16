@@ -107,7 +107,7 @@ class To_Do_List_Intro extends StatelessWidget {
                     height: 50,
                     width: 300,
                     color: App_Text.button_color,
-                    child:  Center(child: Text("Continue >>",
+                    child:  const Center(child: Text("Continue >>",
                       style: App_Text.button_text,),),
                   ),
                   onTap: (){

@@ -39,7 +39,7 @@ class MyHomePage extends StatelessWidget {
                   height: 50,
                   width: 300,
                   color: App_Text.button_color,
-                  child:  Center(child: Text("Get Started",
+                  child:  const Center(child: Text("Get Started",
                   style: App_Text.button_text,),),
                 ),
                 onTap: (){

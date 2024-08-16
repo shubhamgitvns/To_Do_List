@@ -7,7 +7,7 @@ import 'package:to_do_list/home_page/panding_page.dart';
 
 class Bottomnavigation extends StatefulWidget {
   int index = 0;
-  Bottomnavigation({Key? key, required this.index}) : super(key: key);
+  Bottomnavigation({super.key, required this.index});
 
   @override
   State<Bottomnavigation> createState() => _BottomnavigationState();
@@ -15,7 +15,7 @@ class Bottomnavigation extends StatefulWidget {
 
 class _BottomnavigationState extends State<Bottomnavigation> {
   int _selectedIndex = 0;
-  bool _showBottomSheet = false;
+  final bool _showBottomSheet = false;
   int _previousIndex = 0;
 
   static final List<Widget> _widgetOptions = <Widget>[

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class App_Text{
-  static final TextStyle button_text =
+  static const TextStyle button_text =
   TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 25);
 
-  static final TextStyle label =
+  static const TextStyle label =
   TextStyle(fontSize: 16,color: Colors.green,fontWeight: FontWeight.w400);
 
-  static final Color button_color= Colors.teal;
+  static const Color button_color= Colors.teal;
 
 
 

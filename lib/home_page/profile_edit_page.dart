@@ -1,13 +1,9 @@
 import 'dart:async';
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:loading_animation_widget/loading_animation_widget.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import '../app_theam.dart';
-import '../intro_page/inro_page.dart';
 
 class Edit_ProfilePage extends StatefulWidget {
   const Edit_ProfilePage({super.key});

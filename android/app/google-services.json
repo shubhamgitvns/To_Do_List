@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "527919222124",
+    "project_id": "goalgetterapp-1c56c",
+    "storage_bucket": "goalgetterapp-1c56c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527919222124:android:2586c7e347cf3a5d063749",
+        "android_client_info": {
+          "package_name": "com.example.gga_Sha_102D2D"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkm9wynbKkuTjDqNGeXkdsiq6cy3_ff6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527919222124:android:f27145c436c86ebb063749",
+        "android_client_info": {
+          "package_name": "com.example.gga_Sha_102D2D2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkm9wynbKkuTjDqNGeXkdsiq6cy3_ff6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

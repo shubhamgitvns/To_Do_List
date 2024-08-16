@@ -23,12 +23,12 @@ dependencies:
   syncfusion_flutter_sliders: ^25.2.3
 
 
+  connectivity_plus: any
+  firebase_core: ^2.24.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  syncfusion_flutter_sliders: ^25.2.7
-  connectivity_plus: ^2.3.4
-  table_calendar: ^3.0.9
+#  syncfusion_flutter_sliders: ^25.2.7table_calendar: ^3.0.9
   url_launcher: ^6.2.6
 
 
